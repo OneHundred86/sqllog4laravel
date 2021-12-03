@@ -1,0 +1,34 @@
+{
+    "name": "oh86/sqllog",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "laravel",
+        "sql log",
+        "slowlog"
+    ],
+    "description": "log for sql in laravel framework",
+    "autoload": {
+        "psr-4": {
+            "Oh86\\Sqllog\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "chenguangjun",
+            "email": "chen.gj@qq.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "laravel/framework": "*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Oh86\\Sqllog\\SqllogServiceProvider"
+            ]
+        }
+    }
+}

@@ -46,7 +46,7 @@ class DBQueryListener
             }
         }
 
-        $content['sql'] = sprintf(str_replace('?', '%s', $event->sql), ...$event->bindings);
+        $content['sql'] = sprintf(str_replace('?', '%s', str_replace('%', '%%', $event->sql)), ...$event->bindings);
 
         if($this->config['debug_backtrace']){
             $e = new \Exception("sql execute too slow");
